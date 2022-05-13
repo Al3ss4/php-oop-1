@@ -66,6 +66,19 @@ $title = $film1 -> titoloMovie();
 $date = $film1->dataUscitaMovie() ;
 $director =$film1->registaMovie();
 
+echo  "Il film " . $title . " è uscito il  " . $date . " ed è stato diretto da " . $director . "<br>";
+
+
+$film2 = new Movie('');
+$film2->titolo( 'Doctor Strange nel Multiverso della Follia');
+$film2->dataUscita('04 Maggio 2022 ');
+$film2->regista(' Sam Raimi');
+
+
+$title = $film2 -> titoloMovie();
+$date = $film2->dataUscitaMovie() ;
+$director =$film2->registaMovie();
+
 echo  "Il film " . $title . " è uscito il  " . $date . " ed è stato diretto da " . $director;
 
 
