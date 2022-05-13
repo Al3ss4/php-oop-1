@@ -12,4 +12,20 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 */
 
 
+    // - è definita una classe ‘Movie’
+    //=> all'interno della classe sono dichiarate delle variabili d'istanza
+class Movie {
+
+    public $titolo;
+    public $dataDiUscita;
+
+    // => all'interno della classe è definito un costruttore
+    function __construct($_titolo, $_dataDiUscita){
+        $this -> titolo = $_titolo;
+        $this -> dataDiUscita = $_dataDiUscita;
+    }
+
+
+}
+
 ?>
