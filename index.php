@@ -7,7 +7,7 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 - è definita una classe ‘Movie’
    => all'interno della classe sono dichiarate delle variabili d'istanza
    => all'interno della classe è definito un costruttore
-
+   => all'interno della classe è definito almeno un metodo
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
 
 */
@@ -27,6 +27,15 @@ class Movie {
 
 
     // => all'interno della classe è definito almeno un metodo
+
+    public function titolo($_titolo){
+        $this->titolo = $_titolo;
+    }
+
+    public function titoloMovie(){
+        return $this->titolo;
+    }
+
     public function dataUscita($_dataDiUscita){
         $this->dataDiUscita = $_dataDiUscita;
     }
@@ -44,6 +53,21 @@ class Movie {
     }
 
 }
+
+// - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
+
+$film1 = new Movie('');
+$film1->titolo( 'Animali Fantastici: I Segreti di Silente');
+$film1->dataUscita('13 Aprile 2022 ');
+$film1->regista(' David Yates');
+
+
+$title = $film1 -> titoloMovie();
+$date = $film1->dataUscitaMovie() ;
+$director =$film1->registaMovie();
+
+echo  "Il film " . $title . " è uscito il  " . $date . " ed è stato diretto da " . $director;
+
 
 ?>
 
